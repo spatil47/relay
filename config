@@ -1,0 +1,24 @@
+[SCRIPTS]
+myproject = /home/pi/relay/python/script.py
+
+[HTTP]
+enabled = true
+port = 8000
+password = /etc/webiopi/passwd
+doc-root = /home/pi/relay/html
+welcome-file = index.html
+
+[COAP]
+enabled = true
+port = 5683
+multicast = true
+
+[GPIO]
+2 = OUT 0
+3 = OUT 0
+4 = OUT 0
+17 = OUT 0
+27 = OUT 0
+22 = OUT 0
+10 = OUT 0
+9 = OUT 0 
