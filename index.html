@@ -49,19 +49,34 @@
 //		content.append(button); // append button to content div
 		
 		// you can also create a button which calls a different function for mouse down and up events
-		button = webiopi().createButton("hold", "Hold", mousedown, mouseup);
+		button = webiopi().createButton("allOn", "All On", function() {
+			webiopi().digitalWrite(2, 1);
+			webiopi().digitalWrite(3, 1);
+			webiopi().digitalWrite(4, 1);
+			webiopi().digitalWrite(17, 1);
+			webiopi().digitalWrite(27, 1);
+			webiopi().digitalWrite(22, 1);
+			webiopi().digitalWrite(10, 1);
+			webiopi().digitalWrite(9, 1);
+
+		});
+		content.append(button);
+	
+		button = webiopi().createButton("allOff", "All Off", function() {
+			webiopi().digitalWrite(2, 0);
+			webiopi().digitalWrite(3, 0);
+			webiopi().digitalWrite(4, 0);
+			webiopi().digitalWrite(17, 0);
+			webiopi().digitalWrite(27, 0);
+			webiopi().digitalWrite(22, 0);
+			webiopi().digitalWrite(10, 0);
+			webiopi().digitalWrite(9, 0);
+		});
+
 		content.append(button);
 		
 		webiopi().refreshGPIO(true);
 	});
-		
-	function mousedown() {
-		webiopi().digitalWrite(2, 1);
-	}
-	
-	function mouseup() {
-		webiopi().digitalWrite(2, 0);
-	}
 	
 	</script>
 	<style type="text/css">
