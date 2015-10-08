@@ -1,40 +1,16 @@
 webiopi().ready(function() {
-	webiopi().setFunction(2, "out");
-	webiopi().setFunction(3, "out");
-	webiopi().setFunction(4, "out");
-	webiopi().setFunction(17, "out");
-	webiopi().setFunction(27, "out");
-	webiopi().setFunction(22, "out");
-	webiopi().setFunction(10, "out");
-	webiopi().setFunction(9, "out");
+var gpioPins = [2,3,4,17,27,22,10,9];
+
+for(var i=0; i<gpioPins.length; i++) {
+	webiopi().setFunction(gpioPins[i], "out");
+}
 
 	var content, button;
 	content = $("#content");
-		
-// "Relay 1" labeled button for GPIO 2
-	button = webiopi().createGPIOButton(2, "Relay 1");
+for(var j=0; j<gpioPins.length; j++) {
+	button = webiopi().createGPIOButton(gpioPins[i], "Relay " + gpioPins[i]);
 	content.append(button); // append button to content div
-// "Relay 2" labeled button for GPIO 3
-	button = webiopi().createGPIOButton(3, "Relay 2");
-	content.append(button); // append button to content div
-// "Relay 3" labeled button for GPIO 4
-	button = webiopi().createGPIOButton(4, "Relay 3");
-	content.append(button); // append button to content div
-// "Relay 4" labeled button for GPIO 17
-	button = webiopi().createGPIOButton(17, "Relay 4");
-	content.append(button); // append button to content div
-// "Relay 5" labeled button for GPIO 27
-	button = webiopi().createGPIOButton(27, "Relay 5");
-	content.append(button); // append button to content div
-// "Relay 6" labeled button for GPIO 22
-	button = webiopi().createGPIOButton(22, "Relay 6");
-	content.append(button); // append button to content div
-// "Relay 7" labeled button for GPIO 10
-	button = webiopi().createGPIOButton(10, "Relay 7");
-	content.append(button); // append button to content div
-// "Relay 8" labeled button for GPIO 9
-	button = webiopi().createGPIOButton(9, "Relay 8");
-	content.append(button); // append button to content div
+}
        
 // "All On" button for all GPIOs used
 	button = webiopi().createButton("allOn", "All On", function() {
