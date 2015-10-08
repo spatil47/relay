@@ -8,3 +8,7 @@ A [WebIOPi](http://webiopi.trouch.com)-based system for turning outlet-powered d
 ### Dependencies
 - Python
 - WebIOPi
+
+## Issues/ToDo
+- When the WebIOPi server is started in standalone mode, the relays turn on and off for a second. This needs to be fixed soon.
+- When the web interface is loaded for the first time after starting the WebIOPi server, the relays all turn on at the same time. This needs to be fixed soon.
