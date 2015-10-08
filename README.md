@@ -5,6 +5,7 @@ A [WebIOPi](http://webiopi.trouch.com)-based system for turning outlet-powered d
 1. Install the dependencies listed.
 2. Clone repository into your home directory.
 3. Run `./setup`, and follow the interactive prompts.
+
 ### Dependencies
 - Python
 - WebIOPi
