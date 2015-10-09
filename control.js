@@ -8,7 +8,7 @@ for(var i=0; i<gpioPins.length; i++) {
 	var content, button;
 	content = $("#content");
 for(var j=0; j<gpioPins.length; j++) {
-	button = webiopi().createGPIOButton(gpioPins[i], "Relay " + gpioPins[i]);
+	button = webiopi().createGPIOButton(gpioPins[j], "Relay " + gpioPins[j]);
 	content.append(button); // append button to content div
 }
        
