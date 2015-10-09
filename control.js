@@ -15,30 +15,17 @@ for(i=0; i<gpioPins.length; i++) {
        
 // "All On" button for all GPIOs used
 	button = webiopi().createButton("allOn", "All On", function() {
-		webiopi().digitalWrite(2, 1);
-		webiopi().digitalWrite(3, 1);
-		webiopi().digitalWrite(4, 1);
-		webiopi().digitalWrite(17, 1);
-		webiopi().digitalWrite(27, 1);
-		webiopi().digitalWrite(22, 1);
-		webiopi().digitalWrite(10, 1);
-		webiopi().digitalWrite(9, 1);
-	});
-	content.append(button);
+		for(i=0; i<gpioPins.length; i++) {
+			webiopi().digitalWrite(gpioPins[i], 1);
+		}
+	});	content.append(button);
 
 // "All Off" button for all GPIOs used
 	button = webiopi().createButton("allOff", "All Off", function() {
-		webiopi().digitalWrite(2, 0);
-		webiopi().digitalWrite(3, 0);
-		webiopi().digitalWrite(4, 0);
-		webiopi().digitalWrite(17, 0);
-		webiopi().digitalWrite(27, 0);
-		webiopi().digitalWrite(22, 0);
-		webiopi().digitalWrite(10, 0);
-		webiopi().digitalWrite(9, 0);
-	});
-
-	content.append(button);
+		for(i=0; i<gpioPins.length; i++) {
+			webiopi().digitalWrite(gpioPins[i], 0);
+		}
+	});	content.append(button);
 	
 	webiopi().refreshGPIO(true);
 });
