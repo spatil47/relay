@@ -1,7 +1,7 @@
 #+TITLE: Wireless Power Squid
-A [WebIOPi](http://webiopi.trouch.com)-based system for turning outlet-powered devices on and off.
+A [[http://webiopi.trouch.com][WebIOPi]] -based system for turning outlet-powered devices on and off.
 
-The goal is to add automation to the [IEEE club space](http://clubs.njit.edu/ieee/) at [NJIT](http://njit.edu).
+The goal is to add automation to the [[http://clubs.njit.edu/ieee/][IEEE club space]] at [[http://njit.edu][NJIT]].
 
 * Installation
 1. Install the dependencies listed.
