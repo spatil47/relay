@@ -1,15 +1,19 @@
-# NJIT IEEE Automation Project Phase 1
+#+TITLE: Wireless Power Squid
 A [WebIOPi](http://webiopi.trouch.com)-based system for turning outlet-powered devices on and off.
 
-## Installation
+The goal is to add automation to the [IEEE club space](http://clubs.njit.edu/ieee/) at [NJIT](http://njit.edu).
+
+* Installation
 1. Install the dependencies listed.
 2. Clone repository into your home directory.
-3. Run `./setup`, and follow the interactive prompts.
+3. Run `./setup` and follow the interactive prompts.
 
-### Dependencies
-- Python
+** Dependencies
+- Python v2.x
 - WebIOPi
 
-## Issues/ToDo
+* Issues/ToDo
+- We need to add scheduling functionality to the web interface.
+- We need to create the `./setup` installation script.
 - When the WebIOPi server is started in standalone mode, the relays turn on and off for a second. This needs to be fixed soon.
 - When the web interface is loaded for the first time after starting the WebIOPi server, the relays all turn on at the same time. This needs to be fixed soon.
