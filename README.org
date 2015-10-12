@@ -12,8 +12,3 @@ The goal is to add automation to the [[http://clubs.njit.edu/ieee/][IEEE club sp
 - Python v2.x
 - WebIOPi
 
-* Issues/ToDo
-- We need to add scheduling functionality to the web interface.
-- We need to create the ~./setup~ installation script.
-- When the WebIOPi server is started in standalone mode, the relays turn on and off for a second. This needs to be fixed soon.
-- When the web interface is loaded for the first time after starting the WebIOPi server, the relays all turn on at the same time. This needs to be fixed soon.
