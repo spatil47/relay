@@ -16,14 +16,14 @@ for(i=0; i<gpioPins.length; i++) {
 // "All On" button for all GPIOs used
 	button = webiopi().createButton("allOn", "All On", function() {
 		for(i=0; i<gpioPins.length; i++) {
-			webiopi().digitalWrite(gpioPins[i], 1);
+			webiopi().digitalWrite(gpioPins[i], 0);
 		}
 	});	content.append(button);
 
 // "All Off" button for all GPIOs used
 	button = webiopi().createButton("allOff", "All Off", function() {
 		for(i=0; i<gpioPins.length; i++) {
-			webiopi().digitalWrite(gpioPins[i], 0);
+			webiopi().digitalWrite(gpioPins[i], 1);
 		}
 	});	content.append(button);
 	
